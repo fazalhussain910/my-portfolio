@@ -35,7 +35,13 @@ export default function App() {
         <Skills skills={portfolioData.skills} />
 
         {/* Featured Projects */}
-        <Projects projects={portfolioData.projects} />
+        <Projects
+          projects={portfolioData.projects}
+          githubUrl={
+            portfolioData.socials.find((s) => s.name === "GitHub")?.url ||
+            "https://github.com/fazalhussain910"
+          }
+        />
 
         {/* Services & Timeline */}
         <ServicesTimeline

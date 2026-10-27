@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight, ExternalLink } from "lucide-react";
 import { SocialLogos } from "./Icons";
 import "./Projects.css";
 
-export default function Projects({ projects }) {
+export default function Projects({ projects, githubUrl = "https://github.com/fazalhussain910" }) {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
@@ -20,10 +20,11 @@ export default function Projects({ projects }) {
           </div>
 
           <a
-            href="https://github.com/fazalhussain"
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-view-all"
+            title="View all repositories on GitHub"
           >
             <span>View All Projects</span>
             <ArrowRight size={15} />
