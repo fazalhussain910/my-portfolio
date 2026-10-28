@@ -157,9 +157,9 @@ export const portfolioData = {
       category: "AI • Gaming",
       description: "AI-powered aim coach for gamers using LangGraph and AMD APIs.",
       image: "/images/project-agenticaim.png",
-      liveUrl: "https://github.com/fazalhussain910/agentic-aim",
+      liveUrl: "https://agenticaim.online",
       githubUrl: "https://github.com/fazalhussain910/agentic-aim",
-      status: "View Demo",
+      status: "Live Demo",
       featured: true,
     },
     {
