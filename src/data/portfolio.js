@@ -5,7 +5,7 @@ export const portfolioData = {
     badge: "Agentic AI Developer",
     heroGreeting: "Hi, I'm",
     heroName: "Fazal Hussain",
-    heroSubtitle: "Python Developer | Website Developer | AI Enthusiast",
+    heroSubtitle: "Agentic AI Developer | Python Developer | Website Developer | AI Enthusiast",
     heroDescription:
       "I build modern websites, automate workflows with AI, and create smart solutions for real-world problems. Currently learning Agentic AI at SMIT and exploring the future of AI agents.",
     portraitImg: "/images/fazal-portrait.png",
