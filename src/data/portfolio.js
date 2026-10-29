@@ -231,9 +231,9 @@ export const portfolioData = {
     heading: "Let's Work Together",
     description:
       "Have a project in mind? Feel free to reach out. I'm always open to new opportunities and collaborations.",
-    email: "fazalhussain.work@gmail.com",
-    phone: "+92 312 3456789",
-    whatsappNumber: "923123456789",
+    email: "hu8843555@gmail.com",
+    phone: "+92 321 6615451",
+    whatsappNumber: "923216615451",
     location: "Faisalabad, Pakistan",
   },
 };
