@@ -1,0 +1,245 @@
+/* [project]/src/components/ServicesTimeline.css [app-client] (css) */
+.services-timeline-grid {
+  grid-template-columns: 1.2fr .8fr;
+  align-items: start;
+  gap: 40px;
+  display: grid;
+}
+
+.services-list {
+  flex-direction: column;
+  gap: 18px;
+  display: flex;
+}
+
+.service-card {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  background: #0a142ab8;
+  border: 1px solid #3b82f62e;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  text-decoration: none;
+  display: flex;
+}
+
+.service-card:hover {
+  background: #0e1a36d9;
+  border-color: #8b5cf673;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px #00000059, 0 0 18px #8b5cf626;
+}
+
+.service-left {
+  flex: 1;
+  align-items: flex-start;
+  gap: 18px;
+  display: flex;
+}
+
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+  color: var(--cyan);
+  background: #3b82f61f;
+  border: 1px solid #3b82f640;
+  border-radius: 12px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  display: flex;
+}
+
+.service-card:nth-child(2) .service-icon-box {
+  color: var(--purple-light);
+  background: #8b5cf61f;
+  border-color: #8b5cf640;
+}
+
+.service-info {
+  flex-direction: column;
+  display: flex;
+}
+
+.service-title {
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.service-desc {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-size: .86rem;
+  line-height: 1.5;
+}
+
+.service-features {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.service-feature {
+  color: #cbd5e1;
+  align-items: center;
+  gap: 6px;
+  font-size: .78rem;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.feature-check {
+  color: var(--cyan);
+  font-size: .85rem;
+}
+
+.service-arrow-btn {
+  width: 36px;
+  height: 36px;
+  color: var(--cyan);
+  transition: all var(--transition-fast);
+  background: #3b82f61f;
+  border: 1px solid #3b82f640;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.service-card:hover .service-arrow-btn {
+  background: var(--grad-primary);
+  color: #fff;
+  border-color: #0000;
+  transform: translateX(3px);
+  box-shadow: 0 0 12px #8b5cf680;
+}
+
+.timeline-card {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  background: #0a142ab8;
+  border: 1px solid #3b82f62e;
+  height: 100%;
+  padding: 30px 24px;
+}
+
+.timeline-heading {
+  color: var(--text-primary);
+  letter-spacing: -.01em;
+  margin-bottom: 28px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.timeline-list {
+  flex-direction: column;
+  gap: 28px;
+  padding-left: 14px;
+  display: flex;
+  position: relative;
+}
+
+.timeline-line {
+  background: linear-gradient(#3b82f6 0%, #8b5cf6 70%, #8b5cf61a 100%);
+  width: 2px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 20px;
+}
+
+.timeline-item {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding-left: 26px;
+  display: flex;
+  position: relative;
+}
+
+.timeline-dot {
+  background: var(--blue);
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 0 10px var(--cyan);
+  border: 2px solid #050816;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: -2px;
+}
+
+.timeline-item.current .timeline-dot {
+  background: var(--cyan);
+  box-shadow: 0 0 12px var(--cyan);
+}
+
+.timeline-content {
+  flex-direction: column;
+  display: flex;
+}
+
+.timeline-title {
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  font-size: .95rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.timeline-role {
+  color: var(--text-secondary);
+  font-size: .82rem;
+}
+
+.timeline-badge {
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+  padding: 4px 12px;
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.timeline-badge.current {
+  color: var(--cyan);
+  background: #22d3ee1f;
+  border: 1px solid #22d3ee59;
+  box-shadow: 0 0 10px #22d3ee26;
+}
+
+.timeline-badge.past {
+  color: var(--text-muted);
+  background: #94a3b81a;
+  border: 1px solid #94a3b833;
+}
+
+@media (max-width: 960px) {
+  .services-timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .service-arrow-btn {
+    align-self: flex-end;
+  }
+}
+
+/*# sourceMappingURL=src_components_ServicesTimeline_css_1igg3k2-ikub5._.single.css.map*/
