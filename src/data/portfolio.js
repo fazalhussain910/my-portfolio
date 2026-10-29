@@ -19,14 +19,19 @@ export const portfolioData = {
       icon: "github",
     },
     {
+      name: "Instagram",
+      url: "https://instagram.com/fazal_hussain_910",
+      icon: "instagram",
+    },
+    {
+      name: "TikTok",
+      url: "https://www.tiktok.com/@fazal_hussain_910",
+      icon: "tiktok",
+    },
+    {
       name: "LinkedIn",
       url: "https://linkedin.com/in/fazalhussain",
       icon: "linkedin",
-    },
-    {
-      name: "Discord",
-      url: "https://discord.com/users/fazalhussain",
-      icon: "discord",
     },
     {
       name: "YouTube",
