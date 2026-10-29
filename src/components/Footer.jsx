@@ -2,7 +2,7 @@ import React from "react";
 import { SocialLogos } from "./Icons";
 import "./Footer.css";
 
-export default function Footer({ personalData, socials, onOpenAdmin }) {
+export default function Footer({ personalData, socials }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -41,16 +41,6 @@ export default function Footer({ personalData, socials, onOpenAdmin }) {
           </div>
 
           <span className="footer-tagline">Code • Build • Innovate</span>
-
-          {onOpenAdmin && (
-            <button
-              onClick={onOpenAdmin}
-              className="admin-trigger-btn"
-              title="Open Admin Project Manager (Ctrl+Shift+A)"
-            >
-              ⚙ Admin
-            </button>
-          )}
         </div>
       </div>
     </footer>

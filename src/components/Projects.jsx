@@ -5,7 +5,6 @@ import "./Projects.css";
 
 export default function Projects({
   projects,
-  cmsSource,
   githubUrl = "https://github.com/fazalhussain910",
 }) {
   return (
@@ -16,26 +15,7 @@ export default function Projects({
           <div>
             <div className="section-eyebrow">
               <Sparkles size={15} />
-              <span>
-                {cmsSource === "notion"
-                  ? "Notion Headless CMS"
-                  : "My Projects"}
-              </span>
-              {cmsSource === "notion" && (
-                <span
-                  style={{
-                    marginLeft: "8px",
-                    fontSize: "0.72rem",
-                    color: "var(--cyan)",
-                    border: "1px solid var(--border-cyan)",
-                    padding: "2px 8px",
-                    borderRadius: "9999px",
-                    background: "rgba(34, 211, 238, 0.1)",
-                  }}
-                >
-                  🟢 Live ISR Sync (60s)
-                </span>
-              )}
+              <span>My Projects</span>
             </div>
             <h2 className="section-heading" style={{ marginBottom: 0 }}>
               Featured Work
@@ -79,53 +59,17 @@ export default function Projects({
 
                 <p className="project-desc">{proj.description}</p>
 
-                {/* Tech Stack Pills (if provided from Notion CMS) */}
-                {Array.isArray(proj.techStack) && proj.techStack.length > 0 && (
-                  <div
-                    style={{
-                      display: "flex",
-                      flexWrap: "wrap",
-                      gap: "6px",
-                      marginBottom: "14px",
-                    }}
-                  >
-                    {proj.techStack.map((tech) => (
-                      <span
-                        key={tech}
-                        style={{
-                          fontSize: "0.7rem",
-                          padding: "2px 8px",
-                          borderRadius: "4px",
-                          background: "rgba(15, 23, 42, 0.8)",
-                          border: "1px solid rgba(59, 130, 246, 0.2)",
-                          color: "#CBD5E1",
-                        }}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
                 {/* Footer link */}
                 <div className="project-footer">
-                  {proj.liveUrl ? (
-                    <a
-                      href={proj.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
-                      <span>{proj.status || "Live Demo"}</span>
-                      <ExternalLink size={14} />
-                    </a>
-                  ) : (
-                    <span
-                      style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}
-                    >
-                      {proj.status || "View Demo"}
-                    </span>
-                  )}
+                  <a
+                    href={proj.liveUrl || proj.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    <span>{proj.status || "View Demo"}</span>
+                    <ExternalLink size={14} />
+                  </a>
 
                   {proj.githubUrl && (
                     <a
